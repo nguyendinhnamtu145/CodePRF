@@ -9,15 +9,18 @@ int main()
 	scanf (" %d, %d",&a ,&b);
 	float kq = (float)a/b;
 	printf ("Nhap phep toan:");
-	scanf ("Nhap phep toan: %c",pt);
-	
-	if (b!=0)
+	scanf (" %c",&pt);
+	if (pt == '/')
 	{
-		printf("Ket qua: %d %c %d = %.02f",a,pt,b,kq);
+		if (b!=0)
+		{
+			printf("Ket qua: %d %c %d = %.02f",a,pt,b,kq);
+		}
+		else
+		{
+			printf("Khong the chia cho 0");
+		}
+		return 0;
 	}
-	else
-	{
-		printf("Khong the chia cho 0");
-	}
-	return 0;
+	printf ("Bai toan if, if-else");
 }
