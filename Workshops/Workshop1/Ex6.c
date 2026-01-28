@@ -6,78 +6,58 @@
 #include <stdio.h>
 int main()
 {
-	float score1, score2, score3;
+	float chuyenCan, giuaKy, cuoiKy;
 	char diemChu;
-	float sumScore;
-	printf("Nhap diem chuyen can: ");
-	int kq = scanf(" %f",&score1);
-	if (score1<0 || score1>10 || kq != 1)
+	float tongKet;
+	printf("Nhap diem chuyen can, diem giua ky, diem cuoi ky: ");
+	int kq = scanf(" %f %f %f",&chuyenCan, &giuaKy, &cuoiKy);
+	if (kq != 3 || chuyenCan<0 || chuyenCan>10 || giuaKy<0 || giuaKy>10 || cuoiKy<0 || cuoiKy>10 )
 	{
 		printf("Nhap sai!");
 		return 0;
 	}
 	else
 	{
-		printf("Nhap diem giua ky: ");
-		kq = scanf(" %f",&score2);
-		if (score2<0 || score2>10 || kq != 1)
+		tongKet = chuyenCan * 0.1 + giuaKy * 0.3 + cuoiKy * 0.6;
+		if (tongKet >= 8.5)
 		{
-			printf("Nhap sai!");
-			return 0;
+			diemChu = 'A';
 		}
 		else
 		{
-			printf("Nhap diem cuoi ky: ");
-			kq = scanf(" %f",&score3);
-			if (score3<0 || score3>10 || kq != 1)
+			if (tongKet >= 7)
 			{
-				printf("Nhap sai!");
-				return 0;
+				diemChu = 'B';
 			}
 			else
 			{
-				sumScore = score1 * 0.1 + score2 * 0.3 + score3 * 0.6;
-				if (sumScore >= 8.5)
+				if (tongKet >= 5.5)
 				{
-					diemChu = 'A';
+					diemChu = 'C';
 				}
 				else
 				{
-					if (sumScore >= 7)
+					if (tongKet >= 4)
 					{
-						diemChu = 'B';
+						diemChu = 'D';
 					}
 					else
 					{
-						if (sumScore >= 5.5)
-						{
-							diemChu = 'C';
-						}
-						else
-						{
-							if (sumScore >= 4)
-							{
-								diemChu = 'D';
-							}
-							else
-							{
-								diemChu = 'F';
-							}
-						}
+						diemChu = 'F';
 					}
 				}
-				printf ("Diem tong ket: %.2f \n",sumScore);
-				printf ("Diem chu: %c \n", diemChu);
-				if (score1 < 4 || score2 < 4 || score3 < 4 || diemChu == 'F')
-				{
-					printf ("Khong du dieu kien tot nghiep \n");
-				}
-				else
-				{
-					printf ("Khong du dieu kien tot nghiep \n");
-				}
 			}
-			return 0;
 		}
+		printf ("Diem tong ket: %.2f \n",tongKet);
+		printf ("Diem chu: %c \n", diemChu);
+		if (chuyenCan < 4 || giuaKy < 4 || cuoiKy < 4 || diemChu == 'F')
+		{
+			printf ("Khong du dieu kien tot nghiep \n");
+		}
+		else
+		{
+			printf ("Du dieu kien tot nghiep \n");
+		}
+	return 0;
 	}
 }
