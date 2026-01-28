@@ -11,56 +11,73 @@ int main()
 	float sumScore;
 	printf("Nhap diem chuyen can: ");
 	int kq = scanf(" %f",&score1);
-	printf("Nhap diem giua ky: ");
-	kq += scanf(" %f",&score2);
-	printf("Nhap diem cuoi ky: ");
-	kq += scanf(" %f",&score3);
-	if (score1<0 || score1>10 || kq != 3)
+	if (score1<0 || score1>10 || kq != 1)
 	{
 		printf("Nhap sai!");
+		return 0;
 	}
 	else
 	{
-		sumScore = score1 * 0.1 + score2 + 0.3 + score3 * 0.6;
-		if (sumScore >= 8.5)
+		printf("Nhap diem giua ky: ");
+		kq = scanf(" %f",&score2);
+		if (score2<0 || score2>10 || kq != 1)
 		{
-			diemChu = 'A';
+			printf("Nhap sai!");
+			return 0;
 		}
 		else
 		{
-				if (sumScore >= 7)
+			printf("Nhap diem cuoi ky: ");
+			kq = scanf(" %f",&score3);
+			if (score3<0 || score3>10 || kq != 1)
 			{
-				diemChu = 'B';
+				printf("Nhap sai!");
+				return 0;
 			}
 			else
 			{
-				if (sumScore >= 5.5)
+				sumScore = score1 * 0.1 + score2 * 0.3 + score3 * 0.6;
+				if (sumScore >= 8.5)
 				{
-					diemChu = 'C';
+					diemChu = 'A';
 				}
 				else
 				{
-					if (sumScore >= 4)
+					if (sumScore >= 7)
 					{
-						diemChu = 'D';
+						diemChu = 'B';
 					}
 					else
 					{
-						diemChu = 'F';
+						if (sumScore >= 5.5)
+						{
+							diemChu = 'C';
+						}
+						else
+						{
+							if (sumScore >= 4)
+							{
+								diemChu = 'D';
+							}
+							else
+							{
+								diemChu = 'F';
+							}
+						}
 					}
 				}
+				printf ("Diem tong ket: %.2f \n",sumScore);
+				printf ("Diem chu: %c \n", diemChu);
+				if (score1 < 4 || score2 < 4 || score3 < 4 || diemChu == 'F')
+				{
+					printf ("Khong du dieu kien tot nghiep \n");
+				}
+				else
+				{
+					printf ("Khong du dieu kien tot nghiep \n");
+				}
 			}
-		}
-		printf ("Diem tong ket: %.2f \n",sumScore);
-		printf ("Diem chu: %c \n", diemChu);
-		if (score1 < 4 || score2 < 4 || score3 < 4 || diemChu == 'F')
-		{
-			printf ("Khong du dieu kien tot nghiep \n");
-		}
-		else
-		{
-			printf ("Khong du dieu kien tot nghiep \n");
+			return 0;
 		}
 	}
-	return 0;
 }
