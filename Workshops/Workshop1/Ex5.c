@@ -9,7 +9,7 @@
 int main()
 {
 	float soKm;
-	int money, time;
+	int tongTien, soPhutCho;
 	printf("Nhap so km:");
 	int kq = scanf(" %f", &soKm);
 	if(soKm<0||kq != 1)
@@ -20,36 +20,36 @@ int main()
 	else
 	{
 		printf("Nhap so phut cho:");
-		kq = scanf(" %d", &soKm);
-		if(time<0||kq != 1)
+		kq = scanf(" %d", &soPhutCho);
+		if(soPhutCho<0||kq != 1)
 		{
 			printf("Nhap sai!");
 			return 0;
 		}
 		else
 		{
-			if (soKm>=0 && soKm<=0.5)
+			if (soKm<=0.5)
 			{
-				money = 12000;
+				tongTien = 12000;
 			}
 			else
 			{
 				if (soKm<=30)
 				{
-					money = 12000 + (soKm-0.5)*15000;
+					tongTien = 12000 + (soKm-0.5)*15000;
 				}
 				else
 				{
-					money = 12000 + (30-0.5)*15000 + (soKm-30)*12000;	
+					tongTien = 12000 + (30-0.5)*15000 + (soKm-30)*12000;	
 				}
 			}
 			
-			if(time>5)
+			if(soPhutCho>5)
 			{
-				money += (time-5)*1000;
+				tongTien += (soPhutCho-5)*1000;
 			}
 			printf("%-20s %-20s %-20s \n", "So km", "So phut cho", "Tong tien");
-			printf("%-20.2f %-20d %-20d \n", soKm, time, money);
+			printf("%-20.2f %-20d %-20d \n", soKm, soPhutCho, tongTien);
 			return 0;
 		}
 	}
