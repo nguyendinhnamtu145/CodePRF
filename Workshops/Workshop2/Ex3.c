@@ -1,4 +1,4 @@
-//Nhap n nguyen (1<=n<=10). In so tu 1 den n.
+//Nhap n nguyen (1<=n<=10). In so tu 1 den n. In bang cuu chuong n.
 
 #include <stdio.h>
 int main()
@@ -10,7 +10,6 @@ int main()
 	while(scanf("%d",&n)!=1 || n<1 || n>10)
 	{
 		printf("Nhap lai n: ");
-		scanf("%d",&n);
 		fflush(stdin);
 	}
 	
