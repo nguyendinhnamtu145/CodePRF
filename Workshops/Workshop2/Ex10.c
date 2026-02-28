@@ -1,12 +1,11 @@
 //ATM mo phong: Cho phep nguoi dung rut tien lien tuc cho den khi so du khong du hoac chon thoat.
 
 #include <stdio.h>
-
-int main() {
+int main()
+{
     int soDu = 1000000;
     int rutTien;
     int luaChon = 1;
-
     while (luaChon == 1 && soDu > 0) {
         printf("So du hien tai: %d VND\n", soDu);
         printf("Nhap so tien muon rut: ");
@@ -25,7 +24,6 @@ int main() {
             soDu -= rutTien;
             printf("Rut tien thanh cong!\n");
         }
-
         if (soDu > 0) {
             printf("\nBan co muon tiep tuc?\n");
             printf("1. Tiep tuc\n");
@@ -38,8 +36,6 @@ int main() {
 			}
         }
     }
-
     printf("Giao dich ket thuc. So du con lai: %d VND\n", soDu);
-
     return 0;
 }
