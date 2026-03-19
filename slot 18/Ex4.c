@@ -111,6 +111,8 @@ int main() {
 	}
 	else
 	{
+		opt--;
+		printf("Book you have chosen:\n");
 		printf("Book ID: %d\n", b[opt].id);
 		printf("NAME: %s\n", b[opt].name);
 		printf("PRICE: %d\n", b[opt].price);
