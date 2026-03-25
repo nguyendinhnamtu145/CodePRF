@@ -1,0 +1,16 @@
+3
+
+Thong tin sv thu 1:
+ID: DE200434
+Name: MAI TIEN DAT
+Diem: 10.0
+
+Thong tin sv thu 2:
+ID: DE200453
+Name: NGUYEN THI BICH TAM
+Diem: 9.5
+
+Thong tin sv thu 3:
+ID: DE200451
+Name: THAI VAN HUNG
+Diem: 9.0
